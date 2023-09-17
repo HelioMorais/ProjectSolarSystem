@@ -1,3 +1,156 @@
-.App {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('./images/background.png');
+  color: white;
+  font-family: Epilogue , sans-serif;
+}
+
+header {
+  font-size: 2.5rem;
+  margin: 50px 0 20px;
   text-align: center;
+}
+
+h2 {
+  border: 1px solid white;
+  border-radius: 20px;
+  font-size: 2.5rem;
+  margin: 50px;
+  padding: 25px;
+  text-align: center;
+}
+
+.planets {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 20px 100px;
+}
+
+@keyframes spin {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+
+.planet-card {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.planet-card > div {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.planet-card img {
+  animation: spin 20s linear infinite;
+  width: 100%;
+}
+
+
+.planet-card h3 {
+  font-weight: 300;
+}
+
+.mercurio {
+  animation-name: rotate-left;
+  width: 6.2%;
+}
+
+.venus {
+  animation-name: rotate-right;
+  width: 8%;
+}
+
+.terra {
+  animation-name: rotate-right;
+  width: 8.2%;
+}
+
+.marte {
+  animation-name: rotate-right;
+  width: 6.7%;
+}
+
+.jupiter {
+  animation-name: rotate-right;
+  width: 25.7%;
+}
+
+.saturno {
+  animation-name: rotate-right;
+  width: 20.1%;
+}
+
+.urano {
+  animation-name: rotate-right;
+  width: 12.8%;
+}
+
+.netuno {
+  animation-name: rotate-left;
+  width: 12.4%;
+}
+
+@keyframes rotate-right {
+
+  0% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes rotate-left {
+
+  0% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+.missions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.mission-card {
+  border: 1px solid white;
+  border-radius: 20px;
+  margin: 20px 30px;
+  padding: 20px;
+  width: 25%;
+}
+
+.mission-card h3 {
+  font-size: 2rem;
+}
+
+hr {
+  margin: 20px 0 30px;
+}
+
+.mission-card h4 {
+  font-size: 1.5rem;
+  font-weight: 300;
 }
